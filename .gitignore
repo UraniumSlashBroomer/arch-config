@@ -1,0 +1,30 @@
+# This repository lives inside ~/.config, so ignore everything by default and
+# explicitly allow only the portable dotfiles meant for publication.
+/*
+
+!/.gitignore
+!/LICENSE
+!/README.md
+!/pkglist.txt
+
+!/hypr/
+/hypr/*
+!/hypr/hyprland.conf
+!/hypr/hyprpaper.conf
+!/hypr/wallpaper.png
+
+!/kitty/
+/kitty/*
+!/kitty/kitty.conf
+
+!/nvim/
+/nvim/*
+!/nvim/init.lua
+!/nvim/lsp/
+/nvim/lsp/*
+!/nvim/lsp/pyright.lua
+
+!/waybar/
+/waybar/*
+!/waybar/config
+!/waybar/style.css

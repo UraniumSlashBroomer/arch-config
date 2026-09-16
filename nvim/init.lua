@@ -62,6 +62,9 @@ require('packer').startup(function(use)
     use("stevearc/oil.nvim")
     use({ 'everviolet/nvim', as = 'evergarden' })
     use('nvim-mini/mini.hipatterns')
+    use('nvim-mini/mini.pick')
+    use({ 'zenbones-theme/zenbones.nvim', as = 'bones' })
+    use('rktjmp/lush.nvim')
 end)
 
 -- PICK
@@ -94,16 +97,11 @@ hipatterns.setup {
     },
 }
 
-require('evergarden').setup {
-    theme = {
-        variant = 'winter', -- winter|fall|spring|summer
-        accent = 'green',
-    },
-    editor = {
-        transparent_background = false,
-    },
-}
-vim.cmd("colorscheme evergarden")
+vim.opt.background = "dark"
+vim.g.kanagawabones_darkness = "stark"
+vim.cmd.colorscheme("kanagawabones") -- kanagawabones, tokyobones
+
+
 
 vim.lsp.enable("pyright")
 
