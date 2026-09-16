@@ -4,7 +4,7 @@ My compact Hyprland desktop configuration for Arch Linux. It includes a dark
 Waybar theme, a translucent Kitty terminal, keyboard-driven window management,
 screenshots, media controls, and a small Neovim setup.
 
-![Bundled wallpaper](hypr/wallpaper.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/958ecec0-2f7d-42d4-87a0-28a28e46dc61" />
 
 ## Included configuration
 
@@ -25,7 +25,6 @@ back up your existing dotfiles first.
 ### 1. Clone the repository
 
 ```bash
-sudo pacman -S --needed git
 git clone https://github.com/UraniumSlashBroomer/arch-config.git ~/.dotfiles
 ```
 
