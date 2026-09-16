@@ -15,19 +15,26 @@ screenshots, media controls, and a small Neovim setup.
   and tray modules
 - **Kitty** — transparency and background blur
 - **Neovim** — Packer, Oil, Mini Pick, Fugitive, color highlighting, and Pyright
-- `pkglist.txt` — a snapshot of packages installed on the original Arch system
+- `packages.txt` — the minimal Arch package set required by these dotfiles
 
 ## Install
 
 These commands are intended for Arch Linux. Review them before running, and
 back up your existing dotfiles first.
 
-### 1. Install the desktop dependencies
+### 1. Clone the repository
 
 ```bash
-sudo pacman -S --needed git hyprland hyprpaper hyprlock waybar kitty dolphin \
-  wofi brightnessctl playerctl pamixer pavucontrol pulseaudio wl-clipboard \
-  neovim pyright hyprshot ttf-hack otf-font-awesome
+sudo pacman -S --needed git
+git clone https://github.com/UraniumSlashBroomer/arch-config.git ~/.dotfiles
+```
+
+### 2. Install the desktop dependencies
+
+All required packages are available from the official Arch repositories:
+
+```bash
+sudo pacman -S --needed - < ~/.dotfiles/packages.txt
 ```
 
 Packer is needed by the Neovim configuration:
@@ -37,10 +44,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
   ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
 
-### 2. Clone and link the dotfiles
+### 3. Link the dotfiles
 
 ```bash
-git clone https://github.com/UraniumSlashBroomer/arch-config.git ~/.dotfiles
 mkdir -p ~/.config
 
 for directory in hypr kitty nvim waybar; do
@@ -87,7 +93,7 @@ The main modifier is <kbd>Alt</kbd>.
 ## Notes
 
 - The Waybar style expects Hack and Font Awesome glyphs.
-- `pkglist.txt` is a full machine package snapshot, not a minimal install list.
+- `packages.txt` intentionally contains only packages used by this setup.
 - The bundled wallpaper is intentionally stored next to `hyprpaper.conf`, and
   Hyprpaper loads it from `~/.config/hypr/wallpaper.png`.
 

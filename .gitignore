@@ -5,7 +5,7 @@
 !/.gitignore
 !/LICENSE
 !/README.md
-!/pkglist.txt
+!/packages.txt
 
 !/hypr/
 /hypr/*
