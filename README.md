@@ -102,3 +102,8 @@ The main modifier is <kbd>Alt</kbd>.
 Configuration files are released under the [MIT License](LICENSE). The bundled
 wallpaper is not covered by that license; verify that you have the right to
 redistribute it before publishing a fork.
+
+The Waybar configuration is based on a configuration I found on GitHub, and the
+bundled wallpaper was also found on GitHub. I saved both a long time ago and,
+unfortunately, can no longer identify their original sources. If you recognize
+either work, please open an issue so that proper attribution can be added.
